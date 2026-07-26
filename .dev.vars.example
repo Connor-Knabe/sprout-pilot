@@ -1,0 +1,21 @@
+# Required before the telemetry endpoint accepts device data.
+INGEST_TOKEN=replace-with-a-long-random-secret
+
+# Optional Particle command bridge. Remote watering remains disabled until the
+# hardware interlocks and attended fault tests pass.
+PARTICLE_DEVICE_ID=
+PARTICLE_ACCESS_TOKEN=
+ALLOW_REMOTE_WATERING=false
+
+# Optional real forecast. Without both values, dashboard uses labeled mock data.
+WEATHER_LATITUDE=
+WEATHER_LONGITUDE=
+
+# Dashboard access is fail-closed. For local API development only, this bypass
+# works exclusively on localhost/127.0.0.1/[::1]. Never enable it in hosting.
+ALLOW_INSECURE_LOCAL_CONTROL=false
+
+# For hosting that supplies and protects oai-authenticated-user-email, enable
+# auth and list the exact accounts allowed to see live data or issue controls.
+REQUIRE_DASHBOARD_AUTH=true
+DASHBOARD_ALLOWED_EMAILS=

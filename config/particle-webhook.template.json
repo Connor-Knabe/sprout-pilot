@@ -1,0 +1,13 @@
+{
+  "name": "Sprout Pilot telemetry",
+  "event": "plant.telemetry.v1",
+  "url": "{{{SPROUT_API_BASE_URL}}}/api/telemetry?source=particle",
+  "requestType": "POST",
+  "noDefaults": true,
+  "rejectUnauthorized": true,
+  "headers": {
+    "Content-Type": "application/json",
+    "X-Plant-Ingest-Token": "{{{SPROUT_INGEST_TOKEN}}}"
+  },
+  "body": "{{{PARTICLE_EVENT_VALUE}}}"
+}
